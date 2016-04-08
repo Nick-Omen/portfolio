@@ -1,4 +1,6 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,14 +22,13 @@ System.register(['angular2/core'], function(exports_1) {
                 function Work() {
                 }
                 return Work;
-            })();
+            }());
             exports_1("Work", Work);
             SecondScreenComponent = (function () {
                 function SecondScreenComponent() {
                     this.works = WORKS;
                 }
                 SecondScreenComponent.prototype.ngOnInit = function () {
-                    console.log(1);
                     this.workDetailsHandler();
                 };
                 ;
@@ -47,7 +48,7 @@ System.register(['angular2/core'], function(exports_1) {
                     __metadata('design:paramtypes', [])
                 ], SecondScreenComponent);
                 return SecondScreenComponent;
-            })();
+            }());
             exports_1("SecondScreenComponent", SecondScreenComponent);
             WORKS = [
                 { id: 1, imageUrl: 'img/portfolio/1.jpg', workType: 'Frontend, Backend(Python, Django)', siteName: 'Cyber Namba', siteUrl: 'http://cybernamba.com/' },

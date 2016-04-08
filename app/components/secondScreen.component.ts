@@ -17,7 +17,6 @@ export class SecondScreenComponent {
     works = WORKS;
 
     ngOnInit() {
-        console.log(1);
         this.workDetailsHandler();
     };
 
