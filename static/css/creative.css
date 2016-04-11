@@ -75,7 +75,22 @@ aside {
 .no-padding {
     padding: 0;
 }
-
+#mainNav {
+    height: 50px;
+}
+#mainNav .cover {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+}
+li.nav-person {
+    display: none;
+}
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
@@ -97,30 +112,23 @@ aside {
     color: #eb3812;
 }
 
-.navbar-default .nav > li>a,
-.navbar-default .nav>li>a:focus {
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
     color: #222;
 }
 
-.navbar-default .nav > li>a:hover,
-.navbar-default .nav>li>a:focus:hover {
+.navbar-default .nav > li > a.active {
     color: #f05f40;
 }
 
-.navbar-default .nav > li.active>a,
-.navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+.navbar-default .nav > li > a.active:focus,
+.navbar-default .nav > li > a.active:hover {
+    color: #EC3B13!important;
     background-color: transparent;
 }
-
-.navbar-default .nav > li.active>a:hover,
-.navbar-default .nav>li.active>a:focus:hover {
-    background-color: transparent;
-}
-
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
@@ -136,13 +144,13 @@ aside {
         color: #fff;
     }
 
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
+    .navbar-default .nav > li > a:not(.active),
+    .navbar-default .nav > li > a:not(.active):focus {
         color: rgba(255,255,255,.7);
     }
 
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
+    .navbar-default .nav > li > a:not(.active):hover,
+    .navbar-default .nav > li > a:not(.active):focus:hover {
         color: #fff;
     }
 
@@ -178,7 +186,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../../img/header.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -283,7 +291,7 @@ header .header-content .header-content-inner p {
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
     position: absolute;
-    top: 50%;
+    top: 45%;
     width: 100%;
     text-align: center;
     transform: translateY(-50%);
@@ -474,4 +482,52 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+.overflowed {
+    overflow: hidden;
+    padding: 0;
+    height: 0;
+}
+.person {
+    padding: 30px 0;
+}
+.person__photo {
+    margin: 0 auto 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    overflow: hidden;
+    border: 2px solid rgba(55,55,55,.5);
+}
+.person__photo img {
+    margin-top: -85px;
+}
+.person__name {
+    font-size: 22px;
+    color: #f05f40;
+}
+.person__job {
+    font-size: 16px;
+}
+.person__phone {
+    font-size: 18px;
+}
+.person__email {
+    font-size: 22px;
+}
+.person__website {
+    font-size: 16px;
+}
+.person__address {
+    display: inline-block;
+    padding: 10px 10px 0 0;
+    margin: 10px 0 0;
+    border-top: 1px solid rgba(34,34,34,.05);
+}
+.person__address > span:not(:last-child):after {
+    content: ',';
+}
+.person__address > span:last-child:after {
+    content: '.';
 }
