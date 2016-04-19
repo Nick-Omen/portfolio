@@ -148,11 +148,20 @@ var myLib= function() {
             $modalContent.append($workDetails);
             $(this).closest('section').append($modal);
 
-            $modalContent.find('.close').on('click touchend', function() {
+            var closeModal = function() {
                 $modal.addClass('close');
                 setTimeout(function(){
                     $modal.remove();
-                }, 800)
+                }, lib.defaultDelay)
+            };
+
+            $modalContent.find('.close').on('click touchend', function() {
+                closeModal();
+            });
+            $(document).on('click touchstart', function(e){
+                if($(e.target).is($('.modal-mask'))){
+                    closeModal();
+                }
             });
         });
     };
