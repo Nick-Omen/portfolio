@@ -270,7 +270,7 @@ var myLib= function() {
 
 };
 
-$(function() {
+$(document).ready(function() {
     'use strict';
 
     var lib = new myLib();
