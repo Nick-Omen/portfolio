@@ -262,13 +262,19 @@ var myLib= function() {
         });
     };
 
+    this._closeLoad = function () {
+        $('#overflowed').animate({opacity: 0}, 500, function () {
+            $(this).remove();
+        });
+    };
+
 };
 
 $(function() {
     'use strict';
 
     var lib = new myLib();
-
+    lib._closeLoad();
     lib._renderWorks();
     lib._expandMenu();
     lib._slyScroll();
