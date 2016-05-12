@@ -75,6 +75,34 @@ aside {
 .no-padding {
     padding: 0;
 }
+.svg-icon {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+.svg-icon.svg-icon__socials {
+    width: 32px;
+    height: 32px;
+    fill: #666;
+    color: #666;
+    margin:0 5px;
+    transition: color .4s, fill .4s;
+}
+.svg-icon.svg-icon__socials:hover {
+    fill: #f05f40;
+    color: #f05f40;
+}
+.svg-icon.svg-icon__contacts {
+    fill: #f05f40;
+    color: #f05f40;
+    margin-bottom: 20px;
+}
+.socials-block {
+    padding-top: 30px;
+}
+.socials-block a {
+    text-decoration: none;
+}
 #mainNav {
     height: 50px;
 }
@@ -586,4 +614,10 @@ body {
 .modal-mask.close .modal-content {
     transform: translateX(2000px);
     transition: transform .8s;
+}
+footer {
+    background: #666;
+    padding:10px 0;
+    color: #fff;
+    font-size: 12px;
 }
