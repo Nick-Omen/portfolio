@@ -1,0 +1,20 @@
+{
+  "name": "My own site.",
+  "authors": [
+    "Nick-Omen <nikita.omen666@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "www.nick-omen.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}
