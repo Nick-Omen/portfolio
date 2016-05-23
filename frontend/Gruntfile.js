@@ -7,8 +7,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 5000,
                     hostname: 'localhost',
-                    keepalive: true,
-                    base: 'frontend'
+                    keepalive: true
                 }
             }
         },
@@ -16,15 +15,18 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'frontend/static/css/portfolio.css': 'frontend/static/sass/portfolio.sass'
+                    'static/portfolio/css/portfolio.css': 'static/portfolio/sass/portfolio.sass'
                 }
             }
         },
         
-        clean: ['frontend/static/css/portfolio.*'],
+        clean: ['static/portfolio/css/portfolio.*'],
         
         watch: {
-            files: ['frontend/static/sass/**/*'],
+            files: [
+                'static/sass/**/*',
+                'static/portfolio/sass/**/*'
+            ],
             tasks: ['clean', 'sass']
         }
     });

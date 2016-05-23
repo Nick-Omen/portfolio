@@ -1,5 +1,9 @@
 .idea
 node_modules
 frontend/static/bower_components
+frontend/node_modules
 .sass-cache
 *.pyc
+frontend/static/css/*
+frontend/static/portfolio/css/*
+!.gitkeep
