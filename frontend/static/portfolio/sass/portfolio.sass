@@ -3,15 +3,144 @@
 @import "../../sass/mixins"
 @import "../../sass/style"
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700)
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700)
+
 html,
 body
   width: 100%
   height: 100%
-  font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif
+  font-family: "Open Sans", sans-serif
+
+body
+  overflow: hidden
+  background: $white
+  > .one-page
+    padding-top: 4.875rem
+    transition: all .3s
+    &.active
+      top: 0 !important
+
+a
+  color: $blue
+  transition: all $time-transition
+  text-decoration: none
+  &:hover
+    color: $blue-hover
 
 hr
-  max-width: 50px
-  border-color: #f05f40
-  border-width: 3px
-  &.light
-    border-color: #fff
+  &.small
+    border: none
+    height: 7px
+    max-width: 180px
+    margin: 0
+  &.blue
+    background: $blue
+
+.color-white
+  color: $white !important
+
+nav.navbar
+  background: transparentize($blue-dark, 0.75)
+  transition: all $time-transition
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
+  a.navbar-brand
+    padding: 0 !important
+    #logo
+      width: auto
+      height: 36px
+      transition: all $time-transition
+  ul.nav
+    li.nav-item
+      a.nav-link
+        color: $font-color-light
+        transition: all $time-transition
+        font-size: 1rem
+        padding-top: .375rem
+        padding-bottom: .375rem
+      &.active
+        a.nav-link
+          color: $green
+          cursor: text
+      &:not(.active):hover
+        a.nav-link
+          color: $green-hover
+  &.nav-big
+    padding-top: 1rem
+    padding-bottom: 1rem
+    a.navbar-brand
+      #logo
+        height: 46px
+    ul.nav
+      li.nav-item
+        a.nav-link
+          padding-top: .5rem
+          padding-bottom: .5rem
+          font-size: 1.25rem
+
+#page-header
+  width: 100%
+  height: 100%
+  background: #fff url(../images/header.jpg) center center no-repeat
+  background-size: cover
+  padding-top: 4.875rem
+  font-family: "Source Code Pro", sans-serif
+  h1,
+  h2,
+  h3
+    display: inline
+    padding: 5px 0
+    background: transparentize($blue, 0.75)
+    box-shadow: 15px 0 0 0 transparentize($blue, 0.75), -15px 0 0 0 transparentize($blue, 0.75)
+
+#person-handler
+  background: $blue
+  border-color: $blue
+  transition: all $time-transition
+  font-weight: bold
+  &:hover
+    background: $blue-hover
+    border-color: $blue-hover
+
+
+#contact
+  display: flex
+  flex-flow: row wrap
+  align-content: space-between
+  > section,
+  > footer
+    display: flex
+    flex: 1 0 100%
+  .contacts
+    a
+      font-weight: bold
+      &:hover
+        text-decoration: underline
+
+.svg-icon
+  &.svg-icon__socials
+    width: 2rem
+    height: 2rem
+    margin: 0 0.5rem
+    &.facebook
+      fill: rgb(59,89,152)
+    &.github
+      fill: rgb(51, 51, 51)
+    &.linkedin
+      fill: rgb(0, 119, 181)
+  &.svg-icon__contacts
+    width: 3rem
+    height: 3rem
+    margin: 0 auto .5rem
+    fill: $green
+
+footer
+  background: $dark
+  padding: 10px 0
+  color: $white
+  font-size: 0.75rem
+  a
+    color: $green
+    &:hover
+      color: $green-hover

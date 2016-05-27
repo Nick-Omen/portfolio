@@ -2,7 +2,7 @@
 <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Nikita Nikitin - Web Developer from Kyrgyzstan | Omen666</title>
 
@@ -19,12 +19,206 @@
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="http://www.nick-omen.com/"/>
     <meta property="og:description" content="Web developer portfolio."/>
-    <meta property="og:image" content="omg/photo.jpg"/>
+    <meta property="og:image" content="/static/portfolio/images/photo.jpg"/>
 
 </head>
 <body>
 
-<div id="app"></div>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64772002-2', 'auto');
+    ga('send', 'pageview');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter37515610 = new Ya.Metrika({
+                    id: 37515610,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/37515610" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-fixed-top">
+    <div class="container text-right">
+        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navMenu">
+            &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-md" id="navMenu">
+            <a class="navbar-brand" href="/"><img id="logo" src="/static/images/logo.png" alt="Nikita Nikitin"></a>
+            <ul class="nav navbar-nav pull-sm-none pull-md-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar end -->
+
+<header id="page-header" class="one-page">
+    <div class="container">
+        <div class="row m-t-2">
+            <div class="col-xs-12 m-t-3">
+                <div class="m-b-3"><h1 class="color-white">Nikita Nikitin</h1></div>
+                <hr class="small blue m-b-3">
+                <div class="m-b-2">
+                    <h2 class="color-white">Web Developer</h2>
+                </div>
+                <div class="m-b-3">
+                    <h3 class="color-white ">Eat. Sleep. Code. Repeat.</h3>
+                </div>
+                <a id="person-handler" href="#person" class="btn btn-primary btn-xl page-scroll">More About Me</a>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="person" class="one-page" style="background: lightcyan;">
+    <div class="container">
+        <div class="row person" itemscope itemtype="http://schema.org/Person">
+            <div class="col-md-6 text-xs-center">
+                <div class="person__photo"><img src="/static/portfolio/images/photo.jpg" class="img-responsive"
+                                                alt="Photo of Nikita Nikitin"
+                                                itemprop="image"></div>
+                <span class="person__name" itemprop="name">Nick Nikitin</span> <br>
+                <span class="person__job" itemprop="jobTitle">Web Developer</span>
+            </div>
+            <div class="col-md-6">
+                <a href="mailto:nikita.omen666@gmail.com" class="person__email" itemprop="email">nikita.omen666@gmail.com</a>
+                <br>
+                <a href="tel:+996555900375" class="person__phone" itemprop="telephone">+996 (555) 900-375</a> <br>
+                <a href="http://www.nick-omen.com" class="person__website" target="_blank" itemprop="url">www.nick-omen.com</a>
+                <br>
+                <div class="person__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="postalCode">720000</span>
+                    <span itemprop="addressCountry">Kyrgyzstan</span>
+                    <span itemprop="addressLocality">Bishkek</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="message">form</section> -->
+<section id="contact" class="one-page">
+    <section>
+        <div class="container">
+            <div class="row m-t-3">
+                <div class="col-xs-12 col-md-6">
+                    <h2 class="section-heading">Contact me now!</h2>
+                    <hr class="primary">
+                    <p class="p-r-2">If you have a great idea and you know what do you want to create please contact me and we will
+                        discuss details.</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="row text-xs-center">
+                        <div class="col-xs-12 m-b-2">
+                            <div class="row contacts">
+                                <div class="col-xs-6">
+                                    <svg class="svg-icon svg-icon__contacts">
+                                        <use xlink:href="/static/portfolio/images/icons.svg#iconPhone"></use>
+                                    </svg>
+                                    <p><a href="tel:+996555900375">+996 555 900-375</a></p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <svg class="svg-icon svg-icon__contacts">
+                                        <use xlink:href="/static/portfolio/images/icons.svg#iconEmail"></use>
+                                    </svg>
+                                    <p><a href="mailto:nikita.omen666@gmail.com">nikita.omen666@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 m-b-2">
+                            <a href="https://www.facebook.com/nikita.omen666" title="Nikita Nikitin on Facebook" target="_blank">
+                                <svg class="svg-icon svg-icon__socials facebook">
+                                    <use xlink:href="/static/portfolio/images/icons.svg#logoFacebook"></use>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Nick-Omen" title="Nikita Nikitin on Github" target="_blank">
+                                <svg class="svg-icon svg-icon__socials github">
+                                    <use xlink:href="/static/portfolio/images/icons.svg#logoGithub"></use>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nikita-nikitin-b4a477110" title="Nikita Nikitin in LinkedIn"
+                               target="_blank">
+                                <svg class="svg-icon svg-icon__socials linkedin">
+                                    <use xlink:href="/static/portfolio/images/icons.svg#logoLinkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="width: 100%;">
+            <div class="row">
+                <div class="col-xs-4">
+                    Made and designed by <a target="_blank" href="http://www.nick-omen.com/">Nikita Nikitin</a>
+                </div>
+                <div class="col-xs-8 text-xs-right">
+                    Icons made by <a rel="nofollow" target="_blank" href="http://www.flaticon.com/authors/dave-gandy"
+                                     title="Dave Gandy">Dave Gandy</a>, <a rel="nofollow" target="_blank"
+                                                                           href="http://www.flaticon.com/authors/simpleicon"
+                                                                           title="SimpleIcon">SimpleIcon</a>, <a
+                        rel="nofollow" target="_blank" href="http://www.flaticon.com/authors/gregor-cresnar"
+                        title="Gregor Cresnar">Gregor Cresnar</a> from <a rel="nofollow" target="_blank"
+                                                                          href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+                    is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                                      target="_blank">CC 3.0 BY</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
 
 <!-- Custom Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -32,11 +226,6 @@
 
 <!-- Theme styles -->
 <link rel="stylesheet" href="static/portfolio/css/portfolio.css" type="text/css">
-
-<!-- React lib -->
-<script type="text/javascript" src="static/js/react/react.js"></script>
-<script type="text/javascript" src="static/js/react/react-dom.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 
 <!-- jQuery -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -46,8 +235,19 @@
     }
 </script>
 
-<!-- React app -->
-<script type="text/babel" src="static/portfolio/js/app.js"></script>
+<!-- Project js -->
+<script type="text/javascript" src="static/js/single-page.jquery.js"></script>
+<script type="text/javascript" src="static/portfolio/js/project.js"></script>
+
+<!-- JS libs -->
+<script type="text/javascript" src="static/bower_components/underscore/underscore.js"></script>
+<script type="text/javascript" src="static/js/backbone/backbone.js"></script>
+
+<!-- Backbone app -->
+<script type="text/javascript" src="static/portfolio/js/works.backbone.js"></script>
+<script type="text/javascript">$(function () {
+    works = new Works();
+});</script>
 
 </body>
 </html>
