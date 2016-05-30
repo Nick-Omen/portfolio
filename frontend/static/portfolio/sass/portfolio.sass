@@ -4,13 +4,13 @@
 @import "../../sass/style"
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700)
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700)
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,700)
 
 html,
 body
   width: 100%
   height: 100%
-  font-family: "Open Sans", sans-serif
+  font-family: "Work Sans", sans-serif
 
 body
   overflow: hidden
@@ -32,7 +32,7 @@ hr
   &.small
     border: none
     height: 7px
-    max-width: 180px
+    max-width: 252px
     margin: 0
   &.blue
     background: $blue
@@ -41,7 +41,7 @@ hr
   color: $white !important
 
 nav.navbar
-  background: transparentize($blue-dark, 0.75)
+  background: transparentize($blue-hover, 0.75)
   transition: all $time-transition
   padding-top: 0.5rem
   padding-bottom: 0.5rem
@@ -54,7 +54,7 @@ nav.navbar
   ul.nav
     li.nav-item
       a.nav-link
-        color: $font-color-light
+        color: $font-dark
         transition: all $time-transition
         font-size: 1rem
         padding-top: .375rem
@@ -65,8 +65,9 @@ nav.navbar
           cursor: text
       &:not(.active):hover
         a.nav-link
-          color: $green-hover
+          color: $font-dark-hover
   &.nav-big
+    background: transparentize($green-hover, 0.75)
     padding-top: 1rem
     padding-bottom: 1rem
     a.navbar-brand
@@ -78,6 +79,13 @@ nav.navbar
           padding-top: .5rem
           padding-bottom: .5rem
           font-size: 1.25rem
+          color: $font-light
+        &.active
+          a.nav-link
+            color: $blue
+        &:not(.active):hover
+          a.nav-link
+            color: $font-light-hover
 
 #page-header
   width: 100%
@@ -85,7 +93,6 @@ nav.navbar
   background: #fff url(../images/header.jpg) center center no-repeat
   background-size: cover
   padding-top: 4.875rem
-  font-family: "Source Code Pro", sans-serif
   h1,
   h2,
   h3
@@ -93,6 +100,12 @@ nav.navbar
     padding: 5px 0
     background: transparentize($blue, 0.75)
     box-shadow: 15px 0 0 0 transparentize($blue, 0.75), -15px 0 0 0 transparentize($blue, 0.75)
+  h2
+    font-size: 1.75rem
+  h3
+    font-size: 1.375rem
+  a.btn
+    font-size: 1.25rem
 
 #person-handler
   background: $blue
@@ -144,3 +157,32 @@ footer
     color: $green
     &:hover
       color: $green-hover
+
+#person
+  background: $gray-background
+  color: $gray
+
+.person
+  .person__photo
+    width: 250px
+    height: 250px
+    background-color: $gray-background
+    background-position: 50% -85px
+    border-radius: 125px
+    box-shadow: 1px 1px 3px transparentize($blue, .75)
+  .person__hr
+    width: 110px
+    height: 3px
+    border: none
+    margin: 20px auto 10px
+    background: $gray
+  .person__name
+    font-size: 1.25em
+    color: $blue-dark
+  .person__job
+    font-size: 0.875rem
+    color: $blue
+  .person__email
+  .person__phone
+  .person__website
+  .person__address

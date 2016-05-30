@@ -86,16 +86,16 @@
             <a class="navbar-brand" href="/"><img id="logo" src="/static/images/logo.png" alt="Nikita Nikitin"></a>
             <ul class="nav navbar-nav pull-sm-none pull-md-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#person">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#works">My works</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#contact">Contacts</a>
                 </li>
             </ul>
         </div>
@@ -105,14 +105,14 @@
 
 <header id="page-header" class="one-page">
     <div class="container">
-        <div class="row m-t-2">
+        <div class="row">
             <div class="col-xs-12 m-t-3">
                 <div class="m-b-3"><h1 class="color-white">Nikita Nikitin</h1></div>
                 <hr class="small blue m-b-3">
                 <div class="m-b-2">
                     <h2 class="color-white">Web Developer</h2>
                 </div>
-                <div class="m-b-3">
+                <div class="m-b-2">
                     <h3 class="color-white ">Eat. Sleep. Code. Repeat.</h3>
                 </div>
                 <a id="person-handler" href="#person" class="btn btn-primary btn-xl page-scroll">More About Me</a>
@@ -120,22 +120,21 @@
         </div>
     </div>
 </header>
-<section id="person" class="one-page" style="background: lightcyan;">
+<section id="person" class="one-page">
     <div class="container">
         <div class="row person" itemscope itemtype="http://schema.org/Person">
             <div class="col-md-6 text-xs-center">
-                <div class="person__photo"><img src="/static/portfolio/images/photo.jpg" class="img-responsive"
-                                                alt="Photo of Nikita Nikitin"
-                                                itemprop="image"></div>
-                <span class="person__name" itemprop="name">Nick Nikitin</span> <br>
+                <img src="/static/images/transparency.png" style="background-image: url(/static/portfolio/images/photo.jpg);" class="person__photo" alt="Photo of Nikita Nikitin" itemprop="image">
+                <hr class="person__hr">
+                <span class="person__name" itemprop="name">Nikita Nikitin</span> <br>
                 <span class="person__job" itemprop="jobTitle">Web Developer</span>
             </div>
             <div class="col-md-6">
-                <a href="mailto:nikita.omen666@gmail.com" class="person__email" itemprop="email">nikita.omen666@gmail.com</a>
+                <a href="mailto:nikita.omen666@gmail.com" class="person__email" itemprop="email">Nikita.Omen666@gmail.com</a>
                 <br>
-                <a href="tel:+996555900375" class="person__phone" itemprop="telephone">+996 (555) 900-375</a> <br>
-                <a href="http://www.nick-omen.com" class="person__website" target="_blank" itemprop="url">www.nick-omen.com</a>
-                <br>
+                <a href="http://www.nick-omen.com" class="person__website" target="_blank" itemprop="url">www.nick-omen.com</a><br>
+                <a href="tel:+996555900375" class="person__phone" itemprop="telephone">+996 (555) 900-375</a><br>
+
                 <div class="person__address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                     <span itemprop="postalCode">720000</span>
                     <span itemprop="addressCountry">Kyrgyzstan</span>
@@ -145,7 +144,11 @@
         </div>
     </div>
 </section>
-<!-- <section id="message">form</section> -->
+<section id="works" class="one-page">
+    <div class="container">
+        asdf
+    </div>
+</section>
 <section id="contact" class="one-page">
     <section>
         <div class="container">
@@ -236,12 +239,12 @@
 </script>
 
 <!-- Project js -->
-<script type="text/javascript" src="static/js/single-page.jquery.js"></script>
+<script type="text/javascript" src="static/libs/single-page.jquery.js"></script>
 <script type="text/javascript" src="static/portfolio/js/project.js"></script>
 
 <!-- JS libs -->
 <script type="text/javascript" src="static/bower_components/underscore/underscore.js"></script>
-<script type="text/javascript" src="static/js/backbone/backbone.js"></script>
+<script type="text/javascript" src="static/libs/backbone/backbone.js"></script>
 
 <!-- Backbone app -->
 <script type="text/javascript" src="static/portfolio/js/works.backbone.js"></script>

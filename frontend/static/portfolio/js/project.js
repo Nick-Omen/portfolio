@@ -74,11 +74,27 @@ var myLib= function() {
     var lib = this;
     this.defaultDelay = 300; // ms
     
+    lib._menuHandler = function () {
+
+        var changeMenu = function () {
+            var hash = window.location.hash ? window.location.hash : null;
+            if (hash && $(hash).length != 0) {
+                
+            }
+        };
+
+        $(window).on('op.prev op.next op.change', function (event, $page) {
+            console.log($page);
+        });
+    };
+    
 };
 
 $(document).ready(function() {
     'use strict';
 
     var lib = new myLib();
-    $('.one-page').singlePageApp({className: 'one-page'});
+    
+    lib._menuHandler();
+    $('.one-page').singlePageApp({className: 'one-page', useHash: true});
 });
