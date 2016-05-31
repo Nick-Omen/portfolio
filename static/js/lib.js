@@ -100,7 +100,7 @@ var myLib= function() {
      * @returns {*|jQuery}
      */
     this._workItem = function() {
-        return $('<div class="item col-lg-4 col-sm-6">').append($('<div class="portfolio-box">')
+        return $('<div class="item col-lg-4 col-sm-6 col-xs-12">').append($('<div class="portfolio-box">')
             .append($('<img class="img-responsive" src="">'))
             .append($('<div class="portfolio-box-caption">')
                 .append($('<div class="portfolio-box-caption-content">')
@@ -118,12 +118,12 @@ var myLib= function() {
     this._workDetail = function(id) {
         var work = lib._getWorkById(id);
         return $('<div class="row work-details">')
-            .append($('<div class="col-md-6">')
+            .append($('<div class="col-md-6 col-xs-12">')
                 .append($('<div class="title">').append($('<a target="_blank" href="' + work.siteUrl + '" rel="nofollow">').text(work.siteName)))
                 .append($('<div class="description">').text(work.description))
                 .append($('<div class="work-type">').text(work.workType))
                 .append($('<div class="technologies">').text(work.technologies)))
-            .append($('<div class="col-md-6 image-container">')
+            .append($('<div class="col-md-6 col-xs-12 image-container">')
                 .append('<img class="img-responsive" src="' + work.bigImageUrl + '" alt="' + work.siteName + '">'));
     };
 
@@ -158,6 +158,8 @@ var myLib= function() {
             var $workDetails = lib._workDetail($(this).attr('id'));
             $modalContent.html($workDetails);
 
+            $('body').css('overflow', 'hidden');
+
             var pageCenter = {};
             var centerCoordinates = {};
             pageCenter.x = Math.round($(window).width()/2);
@@ -169,6 +171,7 @@ var myLib= function() {
 
             var closeModal = function() {
                 $modal.addClass('close');
+                $('body').css('overflow', 'auto');
             };
 
             $modal.find('.close').on('click', function() {

@@ -298,7 +298,6 @@ header .header-content .header-content-inner p {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 650px;
     cursor: pointer;
 }
 .portfolio-box img {
@@ -664,12 +663,45 @@ footer {
 }
 .work-details .technologies {
     font-size: 16px;
+    margin-bottom: 30px;
 }
 .work-details .description {
-    padding-left: 10px;
+    padding-left: 15px;
     font-size: 14px;
     border-bottom:1px solid #eee;
     width: 60%;
     padding-bottom: 5px;
     margin-bottom: 20px;
+}
+@media all and (max-width: 991px) {
+    .modal-content {
+        margin-top: 15px;
+        height: 100%;
+        margin-bottom: 15px;
+    }
+    .modal-content .close {
+        top: -8px;
+        right: -8px;
+    }
+    .modal-body {
+        overflow: auto;
+        overflow-y: scroll;
+    }
+    .work-details {
+        overflow: visible;
+        height: auto;
+    }
+    .work-details .description {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+@media all and (max-width: 767px) {
+    ul.nav {
+        display: none;
+    }
+    #work-container .item:not(:last-child) .portfolio-box {
+        margin-bottom: 3px;
+        box-shadow: 0 3px 0 0 #f05f40;
+    }
 }
