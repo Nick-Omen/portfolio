@@ -3,6 +3,7 @@ var works = [
         id: 1,
         imageUrl: '/img/portfolio/cn.jpg',
         bigImageUrl: '/img/portfolio/cn_big.jpg',
+        logo: '/img/portfolio/cn_logo.png',
         workType: 'Frontend, Backend',
         siteName: 'Cyber Namba',
         siteUrl: 'http://cybernamba.com/',
@@ -15,6 +16,7 @@ var works = [
         id: 2,
         imageUrl: '/img/portfolio/atletic.jpg',
         bigImageUrl: '/img/portfolio/atletic_big.jpg',
+        logo: '/img/portfolio/wp_logo.png',
         workType: 'Frontend, Backend',
         siteName: 'Athletic',
         siteUrl: 'http://atletic.kz/',
@@ -27,6 +29,7 @@ var works = [
         id: 3,
         imageUrl: '/img/portfolio/express.jpg',
         bigImageUrl: '/img/portfolio/express_big.jpg',
+        logo: '/img/portfolio/express_logo.png',
         workType: 'Frontend, Backend',
         siteName: 'Namba Express',
         siteUrl: 'http://nambaexpress.kg/',
@@ -39,6 +42,7 @@ var works = [
         id: 4,
         imageUrl: '/img/portfolio/gbf.jpg',
         bigImageUrl: '/img/portfolio/gbf_big.jpg',
+        logo: '/img/portfolio/gbf_logo.png',
         workType: 'Frontend, Backend',
         siteName: 'Global Business Forum',
         siteUrl: 'http://gbf.adline.kz/',
@@ -51,6 +55,7 @@ var works = [
         id: 5,
         imageUrl: '/img/portfolio/dobro.jpg',
         bigImageUrl: '/img/portfolio/dobro_big.jpg',
+        logo: '/img/portfolio/dobro_logo.png',
         workType: 'Frontend, Backend',
         siteName: 'Charity Award Site',
         siteUrl: 'http://delaidobro.tv7.kz/',
@@ -63,6 +68,7 @@ var works = [
         id: 6,
         imageUrl: '/img/portfolio/key.jpg',
         bigImageUrl: '/img/portfolio/key_big.jpg',
+        logo: '/img/portfolio/key_logo.png',
         workType: 'Frontend, Backend',
         siteName: 'Official Mul-T-Lock Agent',
         siteUrl: 'http://vzlomunet.kz/',
@@ -101,7 +107,8 @@ var myLib= function() {
      */
     this._workItem = function() {
         return $('<div class="item col-lg-4 col-sm-6 col-xs-12">').append($('<div class="portfolio-box">')
-            .append($('<img class="img-responsive" src="">'))
+            .append($('<img class="img-responsive cover" src="">'))
+            .append($('<img class="img-responsive logo" src="">'))
             .append($('<div class="portfolio-box-caption">')
                 .append($('<div class="portfolio-box-caption-content">')
                     .append($('<div class="project-category text-faded">'))
@@ -136,7 +143,8 @@ var myLib= function() {
             if(works.hasOwnProperty(i)) {
                 var $item = lib._workItem();
                 $item.attr('id', works[i].id);
-                $item.find('img').css('background-image', 'url(' + works[i].imageUrl + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName);
+                $item.find('.cover').css('background-image', 'url(' + works[i].imageUrl + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName);
+                $item.find('.logo').css('background-image', 'url(' + works[i].logo + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName);
                 $item.find('.project-category').text(works[i].workType);
                 $item.find('.project-name').text(works[i].siteName);
                 $item.find('.project-short').text('< ' + works[i].languages + ' >');

@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Nick-Omen/portfolio/issues"
   },
-  "homepage": "https://github.com/Nick-Omen/portfolio#readme"
+  "homepage": "https://github.com/Nick-Omen/portfolio#readme",
+  "dependencies": {
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
 }
