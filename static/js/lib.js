@@ -76,6 +76,45 @@ var works = [
         shortDescription: 'Landing page with contact form for official representative Mul-T-Lock Agency.',
         languages: 'PHP, HTML, CSS, JavaScript',
         technologies: 'WordPress, Bootstrap3, jQuery, AJAX'
+    },
+    {
+        id: 7,
+        imageUrl: '/img/portfolio/lmc.jpg',
+        bigImageUrl: '/img/portfolio/lmc_big.jpg',
+        logo: '/img/portfolio/lmc_logo.png',
+        workType: 'Frontend',
+        siteName: 'Listed My Car',
+        siteUrl: 'http://www.listedmycar.com/',
+        description: 'Auto classifieds software targeted on the USA market based on the Flynax.',
+        shortDescription: 'Auto classifieds software targeted on the USA market based on the Flynax.',
+        languages: 'PHP, HTML, CSS, JavaScript',
+        technologies: 'Flynax'
+    },
+    {
+        id: 8,
+        imageUrl: '',
+        bigImageUrl: '',
+        logo: '/img/portfolio/omen_logo.svg',
+        workType: 'Backend',
+        siteName: 'WP Omen Maps',
+        siteUrl: 'https://wordpress.org/plugins/omen-maps/',
+        description: 'Wordpress plugin to insert Google/Yandex map on site.',
+        shortDescription: 'Wordpress plugin to insert Google/Yandex map on site. Also allows you to insert',
+        languages: 'PHP, HTML, JavaScript',
+        technologies: 'WordPress, Google Map API, Yandex Map API, JavaScript'
+    },
+    {
+        id: 9,
+        imageUrl: '',
+        bigImageUrl: '',
+        logo: '/img/portfolio/omen_logo.svg',
+        workType: 'Frontend, Backend',
+        siteName: 'WP Yandex Map',
+        siteUrl: 'https://wordpress.org/plugins/dp-yandex-map/',
+        description: 'Wordpress plugin to insert Yandex map on site',
+        shortDescription: 'Wordpress plugin to insert Yandex map on site',
+        languages: 'PHP, HTML, JavaScript',
+        technologies: 'WordPress, Yandex Map API, JavaScript'
     }
 ];
 
@@ -126,12 +165,12 @@ var myLib= function() {
         var work = lib._getWorkById(id);
         return $('<div class="row work-details">')
             .append($('<div class="col-md-6 col-xs-12">')
-                .append($('<div class="title">').append($('<a target="_blank" href="' + work.siteUrl + '" rel="nofollow">').text(work.siteName)))
-                .append($('<div class="description">').text(work.description))
-                .append($('<div class="work-type">').text(work.workType))
-                .append($('<div class="technologies">').text(work.technologies)))
+                .append($('<div class="title">').append($('<a target="_blank" href="' + (work.siteUrl || '#') + '" rel="nofollow">').text(work.siteName || '')))
+                .append($('<div class="description">').text(work.description || ''))
+                .append($('<div class="work-type">').text(work.workType || ''))
+                .append($('<div class="technologies">').text(work.technologies || '')))
             .append($('<div class="col-md-6 col-xs-12 image-container">')
-                .append('<img class="img-responsive" src="' + work.bigImageUrl + '" alt="' + work.siteName + '">'));
+                .append('<img class="img-responsive" src="' + work.bigImageUrl || '/img/portfolio/gray.png' + '" alt="' + work.siteName || '' + '">'));
     };
 
     /**
@@ -143,11 +182,11 @@ var myLib= function() {
             if(works.hasOwnProperty(i)) {
                 var $item = lib._workItem();
                 $item.attr('id', works[i].id);
-                $item.find('.cover').css('background-image', 'url(' + works[i].imageUrl + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName);
-                $item.find('.logo').css('background-image', 'url(' + works[i].logo + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName);
-                $item.find('.project-category').text(works[i].workType);
-                $item.find('.project-name').text(works[i].siteName);
-                $item.find('.project-short').text('< ' + works[i].languages + ' >');
+                $item.find('.cover').css('background-image', 'url(' + works[i].imageUrl || '/img/gray.png' + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName || '');
+                $item.find('.logo').css('background-image', 'url(' + works[i].logo || '' + ')').attr('src', '/img/blank.png').attr('alt', works[i].siteName || '');
+                $item.find('.project-category').text(works[i].workType || '');
+                $item.find('.project-name').text(works[i].siteName || '');
+                $item.find('.project-short').text('< ' + works[i].languages || '' + ' >');
                 $workContainer.append($item);
             }
         }
