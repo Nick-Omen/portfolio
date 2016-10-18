@@ -241,6 +241,7 @@ var myLib= function() {
 
             var $menu = $('#mainNav');
             var $header = $('#page-top');
+            var $navbar = $('.navbar-header');
             var scrolled = window.pageYOffset <= $header.height() ? window.pageYOffset : $header.height();
 
             $menu.find('.cover').animate({opacity: Math.round(scrolled*100)/$header.height()/135}, 0);
@@ -318,12 +319,39 @@ var myLib= function() {
         });
     };
 
+    this._appendSocials = function(){
+
+        var $socials = $('#socials');
+        var $navbar = $('.navbar-header');
+
+        $navbar.append($('<div class="header-socials">').html($socials.html()));
+    };
+
     this._closeLoad = function () {
         $('#overflowed').animate({opacity: 0}, 500, function () {
             $(this).remove();
         });
     };
 
+    this._quit = function(){
+
+        $('#quit').click(function(){
+
+            var $els = $('body').find('> nav, > header, > section, > footer');
+            var elsLen = $els.length;
+            $('body').addClass('body-drop');
+            $els.eq(elsLen - 1).addClass('drop-page-1');
+            $els.eq(elsLen - 2).addClass('drop-page-2');
+            $els.eq(elsLen - 3).addClass('drop-page-3');
+            $els.eq(elsLen - 4).addClass('drop-page-4');
+            $els.addClass('drop-page');
+
+            setTimeout(function(){
+                $els.removeClass('drop-page drop-page-1');
+                $('body').removeClass('body-drop');
+            }, 3000);
+        });
+    };
 };
 
 $(document).ready(function() {
@@ -331,9 +359,11 @@ $(document).ready(function() {
 
     var lib = new myLib();
     lib._closeLoad();
+    lib._appendSocials();
     lib._renderWorks();
     lib._expandMenu();
     lib._slyScroll();
     lib._buttonsHandler();
     lib._showPersonalDataHandler();
+    lib._quit();
 });
